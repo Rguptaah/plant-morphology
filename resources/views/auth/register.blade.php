@@ -46,7 +46,6 @@
     <h2 class="text-center text-success mb-4 fw-bold">Create an Account</h2>
     <form method="POST" action="{{ route('register') }}">
         @csrf
-
         <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
@@ -70,6 +69,7 @@
                 <option value="practitioner">Practitioner</option>
                 <option value="researcher">Researcher</option>
                 <option value="botanist">Botanist</option>
+                <option value="other">Other</option>
             </select>
         </div>
 

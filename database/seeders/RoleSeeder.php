@@ -39,6 +39,16 @@ class RoleSeeder extends Seeder
                 'description' => 'Can submit queries and access advanced features'
             ],
             [
+                'name' => 'Student',
+                'slug' => 'student',
+                'description' => 'Can access educational resources and submit queries'
+            ],
+            [
+                'name' => 'Researcher',
+                'slug' => 'researcher',
+                'description' => 'Can access research materials and submit queries'
+            ],
+            [
                 'name' => 'Other',
                 'slug' => 'other',
                 'description' => 'Miscellaneous role for special cases'

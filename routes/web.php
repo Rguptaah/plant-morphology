@@ -22,8 +22,20 @@ Route::get('/advance-search', function () {
 Route::get('/help', function () {
     return view('help');
 })->name('help');
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+Route::get('/plant/detail', function () {
+    return view('plants.more-details');
+})->name('plants.more-details');
+
+
+// Route::name('front.')->middleware('visitor')->group(function() {
+//     Route::get('/', 'FrontpageController@index')->name('index');
+// });
 
 Route::get('/plant/{plant}', [PlantController::class , 'show'])->name('plant.show');
+// Route::get('/plant/{plant}/details', [PlantController::class, 'details'])->name('plant.details');
 
 Route::get('/plant-demo', function () {
     $plant = (object) [

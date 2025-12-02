@@ -11,7 +11,7 @@
     <div class="row justify-content-center align-items-start">
         <!-- Left Section: Image -->
         <div class="col-md-5 text-center mb-4">
-            <img src="{{ asset('storage/' . ($plant->image ?? 'images/datura_innoxia.jpg')) }}" 
+            <img src="{{ $plant->image ?? 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Sacred_datura_%28Datura_wrightii%29_%2814212557338%29.jpg/250px-Sacred_datura_%28Datura_wrightii%29_%2814212557338%29.jpg' }}" 
                  alt="{{ $plant->species ?? 'Plant Image' }}" 
                  class="img-fluid rounded shadow"
                  style="max-height:400px; object-fit:cover;">
@@ -43,6 +43,13 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- View More Details Button -->
+    <div class="text-center mt-4">
+        <a href="{{ route('plants.more-details') }}" class="btn btn-primary fw-semibold">
+            View More Details
+        </a>
     </div>
 </div>
 @endsection

@@ -196,4 +196,11 @@ class PlantController extends Controller
 
         return view('plant-detail', compact('plant'));
     }
+
+    public function details($id)
+    {
+        $plant = Plant::findOrFail($id);
+        return view('plants.more-details', compact('plant'));
+    }
+
 }

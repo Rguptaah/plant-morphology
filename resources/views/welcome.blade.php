@@ -8,7 +8,7 @@
     <div class="container">
         <h1>Explore the World of Plant Morphology 🌿</h1>
         <p>Discover, classify, and learn about plant structures in a modern interactive way.</p>
-        <a href="{{ route('plants.index') }}" class="btn btn-light btn-lg mt-4">Start Exploring</a>
+        <a href="{{ route('plant-index') }}" class="btn btn-light btn-lg mt-4">Start Exploring</a>
     </div>
 </section>
 
@@ -23,7 +23,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Search Plant Details</h5>
                         <p class="card-text text-muted">Use Basic or Advanced Search to find morphological details of thousands of species.</p>
-                        <a href="javscript:void(0);" class="btn btn-success">Search Now</a>
+                        <a href="{{ route('basic-search') }}" class="btn btn-success">Search Now</a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Browse Plant Index</h5>
                         <p class="card-text text-muted">Explore the full plant index organized by family, genus, and characteristics.</p>
-                        <a href="" class="btn btn-success">View Index</a>
+                        <a href="{{ route('plant-index') }}" class="btn btn-success">View Index</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Join the Community</h5>
                         <p class="card-text text-muted">Register to contribute, save searches, and collaborate with plant researchers.</p>
-                        <a href="#" class="btn btn-success">Register</a>
+                        <a href="{{ route('register') }}" class="btn btn-success">Register</a>
                     </div>
                 </div>
             </div>

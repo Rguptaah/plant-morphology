@@ -15,8 +15,8 @@ use Illuminate\View\View;
 class RegisteredUserController extends Controller
 {
     /**
-     * Display the registration view.
-     */
+    * Display the registration view.
+    **/
     public function create(): View
     {
         return view('auth.register');
@@ -47,6 +47,10 @@ class RegisteredUserController extends Controller
             'security_question' => $request->security_question,
             'password' => Hash::make($request->password),
         ]);
+
+        $role = \App\Models\Role::where('slug', $request->role)->first();
+
+        // Role::
 
         event(new Registered($user));
 
